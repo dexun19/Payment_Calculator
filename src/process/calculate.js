@@ -31,10 +31,17 @@ function validateTotalNett(playersData = []) {
     })
 
     // To ensure the total amount after settling is correct(e.g. 50 + 20 + (-15) + (-55)).
-    const paymentResult = settledAmount !== 0 ?
-     console.log('Incorrect total amount to be settled. Try again.') 
-    : cancelOut(totalNett);
+    if (settledAmount !== 0) {
 
+        console.log('Incorrect total amount to be settled. Try again.') 
+
+        // Format negative and positive values
+        return `Incorrect nett amount to be settled, by ${
+            settledAmount > 0 ? '$' + settledAmount : '-$' + (-settledAmount)
+        }. Try again.`;
+    }
+
+    const paymentResult = cancelOut(totalNett);
     return paymentResult
 }
 

@@ -22,7 +22,6 @@ export function resultsPage() {
   });
 
   const paymentResult = calculateAmount(playersData);
-  console.log("paymentResult", paymentResult);
 
   // Replace '\n' with <br> to be added to HTML while inserting the payment result
   document.getElementById('paymentResult').innerHTML = paymentResult.replace(/\n/g, '<br>');

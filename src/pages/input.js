@@ -23,7 +23,7 @@ export function inputPage() {
     const playerDiv = document.createElement('div');
     playerDiv.innerHTML = `
       <label>Player ${playerCount} Win/Loss Amount(Positive = Gain, Negative = Loss): </label>
-      <input type="number" name="player${playerCount}" />
+      <input type="number" name="Player ${playerCount}" />
     `;
     playerInputs.appendChild(playerDiv);
   });

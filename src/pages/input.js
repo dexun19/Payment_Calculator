@@ -3,7 +3,9 @@ import { navigateTo } from '../router';
 export function inputPage() {
   const app = document.getElementById('app');
   app.innerHTML = `
-    <h1>Player Input</h1>
+    <h1>Payment Calculator</h1>\
+    <h4> By: De Xun</h4>
+    <h4> Last Modified: 22/09/2025</h4>
     <button id="addPlayer">Add Player</button>
     <form id="playerForm">
       <div id="playerInputs"></div>
